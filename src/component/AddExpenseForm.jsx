@@ -34,7 +34,7 @@ const AddExpenseForm = () => {
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor='name'>
                         Name
                     </label>
-                    <input className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" value={name} onChange={(e) => setName(e.target.value)} id="name" type="text" placeholder="where you spend" />
+                    <input className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" value={name} onChange={(e) => setName(e.target.value)} id="name" type="text" placeholder="Write here " />
                 </div>
                 <div className="mb-6 text-left m-5">
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="cost">
