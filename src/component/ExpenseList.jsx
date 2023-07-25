@@ -1,8 +1,8 @@
-import  { useContext } from 'react';
+import { useContext } from 'react';
 import { AppContext } from './AppContext';
 import ExpenseItem from './ExpenseItem';
 
-const ExpenseList = () => {
+const ExpenseList = ({ handleDeleteExpense }) => { 
   const { state } = useContext(AppContext);
   const { expenses } = state;
 

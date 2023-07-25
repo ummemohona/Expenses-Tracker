@@ -7,19 +7,26 @@ const AppReducer = (state, action) => {
         ...state,
         expenses: [...state.expenses, action.payload],
       };
+    case 'ADD_INCOME':
+      return {
+        ...state,
+        income: [...state.income, action.payload],
+      };
     case 'DELETE_EXPENSE':
       return {
         ...state,
         expenses: state.expenses.filter((expense) => expense.id !== action.payload),
       };
+      
     default:
       return state;
   }
 };
 
 const initialState = {
-  budget: 0, // Add your initial budget here
+  budget: 0, 
   expenses: [],
+  income: []
 };
 
 export const AppContext = createContext();
@@ -28,7 +35,6 @@ export const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(AppReducer, initialState);
 
   useEffect(() => {
-    // Save expenses to local storage whenever it changes
     localStorage.setItem('expenses', JSON.stringify(state.expenses));
   }, [state.expenses]);
 

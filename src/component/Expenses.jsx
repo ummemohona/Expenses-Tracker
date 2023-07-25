@@ -1,5 +1,5 @@
-import Nav from './Nav';
 import { useState } from 'react';
+import Nav from './Nav';
 import AddExpenseForm from './AddExpenseForm';
 import ExpenseList from './ExpenseList';
 
@@ -23,7 +23,7 @@ const Expenses = () => {
     <div>
       <Nav />
       <div style={{ paddingTop: '84px' }}>
-        <h1 className="w-full grid justify-items-center mt-1 font-bold text-2xl cursor-pointer items-center font-[Poppins] text-gray-800">
+        <h1 className='w-full grid justify-items-center mt-1 font-bold text-2xl cursor-pointer items-center font-[Poppins] text-gray-800'>
           Add Expenses
         </h1>
         <AddExpenseForm handleAddExpense={handleAddExpense} />

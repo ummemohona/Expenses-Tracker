@@ -1,18 +1,20 @@
-
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './component/Home'; 
-import Income from './component/Income'; 
-import Expenses from './component/Expenses'; 
+import Home from './component/Home';
+import Income from './component/Income';
+import Expenses from './component/Expenses';
+import { AppProvider } from './component/AppContext';
 
-const App = () => {
+function App() {
   return (
+    <AppProvider>
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Income" element={<Income />} />
-        <Route path="/Expenses" element={<Expenses />} />
+        <Route path="/income" element={<Income />} />
+        <Route path="/expenses" element={<Expenses />} />
       </Routes>
     </Router>
+    </AppProvider>
   );
 }
 
